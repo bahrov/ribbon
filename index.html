@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/4d50f3cd85.js" crossorigin="anonymous"></script>
     <link/>
+    <script src="script.js"></script>
   </head>
   <body>
 
     <div class="main-container">
 
-      <div class="actions-container"/>
+      <div class="actions-container" id="actions"/>
         <div class="top">
           <div class="line"></div>
           <div class="title">Actions</div>
@@ -21,25 +22,25 @@
         </div>
           
         <div class="bottom">
-          <div class="column c1">
-            <button class="btn big" id="view"><div><i class="far fa-eye"></i></div> View</button>
+          <div class="column">
+            <button class="btn big" id="view" onclick="getID(this)"><div><i class="far fa-eye"></i></div> View</button>
           </div>
-          <div class="column c2">
-            <button class="btn" id="share"><i class="fas fa-share-alt"></i> Share</button>
-            <button class="btn" id="download"><i class="fas fa-download"></i> Download</button>
+          <div class="column">
+            <button class="btn" id="share" onclick="getID(this)"><i class="fas fa-share-alt"></i> Share</button>
+            <button class="btn" id="download" onclick="getID(this)"><i class="fas fa-download"></i> Download</button>
           </div>
-          <div class="column c3">
-            <button class="btn" id="print-pdf"><i class="fas fa-print"></i> Print PDF</button>
-            <button class="btn" id="export"><i class="fas fa-file-export"></i> Export</button>
+          <div class="column">
+            <button class="btn" id="print-pdf" onclick="getID(this)"><i class="fas fa-print"></i> Print PDF</button>
+            <button class="btn" id="export" onclick="getID(this)"><i class="fas fa-file-export"></i> Export</button>
           </div>
-          <div class="column c4">
-            <button class="btn" id="move"><i class="fas fa-expand-arrows-alt"></i> Move</button>
-            <button class="btn" id="delete"><i class="fas fa-trash-alt"></i> Delete</button>
+          <div class="column">
+            <button class="btn" id="move" onclick="getID(this)"><i class="fas fa-expand-arrows-alt"></i> Move</button>
+            <button class="btn" id="delete" onclick="getID(this)"><i class="fas fa-trash-alt"></i> Delete</button>
           </div>
         </div>
       </div>
 
-      <div class="data-container">
+      <div class="data-container" id="data">
         <div class="top">
           <div class="line"></div>
           <div class="title">Data</div>
@@ -47,20 +48,20 @@
         </div>
 
         <div class="bottom">
-          <div class="column c5">
-            <button class="btn big" id="edit-data"><div><i class="fas fa-edit"></i></div> Edit data</button>
+          <div class="column">
+            <button class="btn big" id="edit-data" onclick="getID(this)"><div><i class="fas fa-edit"></i></div> Edit data</button>
           </div>
           <div class="column c6">
-            <button class="btn big" id="batch-data"><div><i class="fas fa-pen-square"></i></div> Batch Editing</button>
+            <button class="btn big" id="batch-data" onclick="getID(this)"><div><i class="fas fa-pen-square"></i></div> Batch Editing</button>
           </div>
-          <div class="column c7">
-            <button class="btn" id="save"><i class="fas fa-save"></i> Save</button>
-            <button class="btn" id="undo"><i class="fas fa-undo-alt"></i> Undo</button>
+          <div class="column">
+            <button class="btn" id="save" onclick="getID(this)"><i class="fas fa-save"></i> Save</button>
+            <button class="btn" id="undo" onclick="getID(this)"><i class="fas fa-undo-alt"></i> Undo</button>
           </div>
         </div>
       </div>
 
-      <div class="baskets-container"/>
+      <div class="baskets-container" id="basket"/>
         <div class="top">
           <div class="line"></div>
           <div class="title" id="basket">Basket</div>
@@ -68,14 +69,14 @@
         </div>
 
         <div class="bottom">
-          <div class="column c7">
-            <button class="btn" id="open"><i class="fas fa-shopping-basket"></i> Open</button>
-            <button class="btn" id="manage"><i class="fas fa-tasks"></i> Manage</button>
+          <div class="column ">
+            <button class="btn" id="open"onclick="getID(this)"><i class="fas fa-shopping-basket"></i> Open</button>
+            <button class="btn" id="manage"onclick="getID(this)"><i class="fas fa-tasks"></i> Manage</button>
           </div>
           </div>
       </div>
 
-      <div class="page-container">
+      <div class="page-container" id="page">
         <div class="top">
           <div class="line"></div>
           <div class="title">Page</div>
@@ -83,7 +84,7 @@
         </div>
 
         <div>
-          <button class="btn big" id="setting"><div><i class="fas fa-cog"></i></div> Settings</button>
+          <button class="btn big" id="setting" onclick="getID(this)"><div><i class="fas fa-cog"></i></div> Settings</button>
         </div>
       </div>
     </div>

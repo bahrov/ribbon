@@ -1,13 +1,19 @@
 "use strict";
 
 const hideShow = function (element, func) {
-  return (document.getElementById(element).style.visibility =
-    func === true ? "visible" : "hidden");
+  if (func === false) {
+    document
+      .getElementById(element)
+      // .classList.add("fade-out")
+      .classList.add("hidden");
+    // .classList.remove("fade-out");
+  } else {
+    document.getElementById(element).classList.remove("hidden");
+  }
 };
 
 const disablEnable = function (element, func) {
-  return (document.getElementById(element).disabled =
-    func === true ? "true" : "false");
+  return (document.getElementById(element).disabled = func);
 };
 
 // To hide button
@@ -37,6 +43,13 @@ const enableBtn = function (element) {
   disablEnable(element, false);
 };
 
-function getID(btn) {
-  console.log(btn.id);
-}
+window.onload = function () {
+  const buttons = document.getElementsByClassName("btn");
+  //console.log(buttons);
+
+  for (let index = 0; index < buttons.length; index++) {
+    // console.log(index);
+    buttons[index].addEventListener("click", (e) => console.log(e.target.id));
+    // console.log(button);
+  }
+};

@@ -70,3 +70,12 @@ button {
 button:hover {
   background-color: rgb(206, 206, 206);
 }
+
+.hidden {
+  display: none;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}

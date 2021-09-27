@@ -1,47 +1,53 @@
 "use strict";
 
-const hideShow = function (element, func) {
-  if (func === false) {
-    document
-      .getElementById(element)
-      // .classList.add("fade-out")
-      .classList.add("hidden");
-    // .classList.remove("fade-out");
-  } else {
-    document.getElementById(element).classList.remove("hidden");
-  }
-};
+const Ribbon = {
 
-const disablEnable = function (element, func) {
-  return (document.getElementById(element).disabled = func);
-};
+  _hideShow = function(element, func) {
+    if (func === false) {
+      document
+        .getElementById(element)
+        // .classList.add("fade-out")
+        .classList.add("hidden");
+      // .classList.remove("fade-out");
+    } else {
+      document.getElementById(element).classList.remove("hidden");
+    }
+  },
 
-// To hide button
-const hideEl = function (element) {
-  hideShow(element, false);
-};
+  _disablEnable = function (element, func) {
+    return (document.getElementById(element).disabled = func);
+  },
 
-// To show hidden button
-const showEl = function (element) {
-  hideShow(element, true);
-};
+  // To hide button
+  hideEl = function (element) {
+    this._hideShow(element, false);
+  },
 
-// To hide section
-const hideSection = function (element) {
-  hideShow(element, false);
-};
-// To show hidden section
-const showSection = function (element) {
-  hideShow(element, true);
-};
-// To disable button
-const disableBtn = function (element) {
-  disablEnable(element, true);
-};
-// To enable button
-const enableBtn = function (element) {
-  disablEnable(element, false);
-};
+  // To show hidden button
+  showEl = function (element) {
+    this._hideShow(element, true);
+  },
+
+  // To hide section
+  hideSection = function (element) {
+    this._hideShow(element, false);
+  },
+
+  // To show hidden section
+  showSection = function (element) {
+    this._hideShow(element, true);
+  },
+
+  // To disable button
+  disableBtn = function (element) {
+    this._disablEnable(element, true);
+  },
+
+  // To enable button
+  enableBtn = function (element) {
+    this._disablEnable(element, false);
+  },
+}
 
 window.onload = function () {
   const buttons = document.getElementsByClassName("btn");

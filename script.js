@@ -45,11 +45,8 @@ const enableBtn = function (element) {
 
 window.onload = function () {
   const buttons = document.getElementsByClassName("btn");
-  //console.log(buttons);
 
   for (let index = 0; index < buttons.length; index++) {
-    // console.log(index);
     buttons[index].addEventListener("click", (e) => console.log(e.target.id));
-    // console.log(button);
   }
 };
